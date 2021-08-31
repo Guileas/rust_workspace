@@ -1,0 +1,22 @@
+version: '3'
+services:
+
+  rust_nightly:
+    image: rust:alpine
+    container_name: ${PROJECT_NAME}
+    hostname: rustup.${PROJECT_NAME}.local
+    domainname: ${PROJECT_NAME}.local
+    working_dir: /rust
+    user: "${UID}:${GID}"
+    tty: true
+    volumes:
+      - ${FOLDER_PATH}:/rust
+    networks:
+      devEnvLocal:
+        aliases:
+          - rust.devEnv.local
+
+networks:
+  devEnvLocal:
+    driver: bridge
+    name: ${PROJECT_NAME}_devEnvLocal
