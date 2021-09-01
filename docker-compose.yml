@@ -13,7 +13,7 @@ services:
     volumes:
       - ${FOLDER_PATH}:/rust
     ports:
-      - "8000:8000"
+      - ${PORT:-8000}:8000
     networks:
       devEnvLocal:
         aliases:
