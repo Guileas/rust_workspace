@@ -1,16 +1,19 @@
 version: '3'
 services:
 
-  rust_nightly:
-    image: rust:alpine
+  rust_alpine:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
     container_name: ${PROJECT_NAME}
     hostname: rustup.${PROJECT_NAME}.local
     domainname: ${PROJECT_NAME}.local
-    working_dir: /rust
     user: "${UID}:${GID}"
     tty: true
     volumes:
       - ${FOLDER_PATH}:/rust
+    ports:
+      - "8000:8000"
     networks:
       devEnvLocal:
         aliases:

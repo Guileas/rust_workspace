@@ -1,4 +1,4 @@
-# RUST WORKSPACE
+# RUST ROCKET WORKSPACE
 
 **Copy the env.dist in a .env file and fill the var with your project information**
 
@@ -27,4 +27,15 @@ make init
 
 ```
 cargo init
+```
+
+5 - Start project (inside container)
+
+```
+cargo run
+```
+
+Test
+```
+cargo test
 ```
