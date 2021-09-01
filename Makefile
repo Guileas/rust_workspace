@@ -1,6 +1,4 @@
-CONTAINER_NAME="rust_workspace"
-
-CONTAINER_USER="$(shell id -u):$(shell id -g)"
+CONTAINER_NAME="rocket_workspace"
 
 build:
 	docker-compose build
