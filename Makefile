@@ -1,4 +1,4 @@
-CONTAINER_NAME="rocket_workspace"
+CONTAINER_NAME="api_rocket_workspace"
 
 build:
 	docker-compose build

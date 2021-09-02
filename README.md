@@ -1,4 +1,4 @@
-# RUST ROCKET WORKSPACE
+# RUST API ROCKET WORKSPACE
 
 **Copy the env.dist in a .env file and fill the var with your project information**
 
@@ -39,3 +39,15 @@ Test
 ```
 cargo test
 ```
+
+Directory structure:
+
+📦src
+ ┣ 📂db (store db connection pool, etc.)
+ ┣ 📂models (data you store in your db)
+ ┣ 📂requests (data sent to a route)
+ ┣ 📂responses (complete response sent to the frontend,status code,resources,etc.)
+ ┃ ┗ 📂resources (data sent to the frontend)
+ ┣ 📂route (all your route, 1 folder/api version)
+ ┃ ┗ 📂v1
+ ┗ 📜main.rs
